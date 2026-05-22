@@ -45,17 +45,17 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          <a href="#projects" className="px-6 py-3 bg-white text-black font-semibold rounded-full hover:scale-105 transition-transform">
+          <a href="#projects" className="px-6 py-3 bg-textMain text-white font-semibold rounded-full hover:bg-textMain/90 hover:scale-[1.02] transition-all shadow-sm">
             View My Work
           </a>
           <div className="flex items-center gap-4 ml-4">
-            <a href="#" className="p-3 bg-surface rounded-full text-textMuted hover:text-white hover:bg-white/10 transition-all">
+            <a href="#" className="p-3 bg-surface border border-border shadow-sm rounded-full text-textMuted hover:text-textMain transition-all">
               <Github className="w-5 h-5" />
             </a>
-            <a href="#" className="p-3 bg-surface rounded-full text-textMuted hover:text-[#0a66c2] hover:bg-white/10 transition-all">
+            <a href="#" className="p-3 bg-surface border border-border shadow-sm rounded-full text-textMuted hover:text-[#0a66c2] transition-all">
               <Linkedin className="w-5 h-5" />
             </a>
-            <a href="#" className="p-3 bg-surface rounded-full text-textMuted hover:text-primary hover:bg-white/10 transition-all">
+            <a href="#" className="p-3 bg-surface border border-border shadow-sm rounded-full text-textMuted hover:text-accent transition-all">
               <Mail className="w-5 h-5" />
             </a>
           </div>

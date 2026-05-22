@@ -1,5 +1,4 @@
 import React from 'react';
-import { Briefcase } from 'lucide-react';
 
 const Experience = () => {
   const experiences = [
@@ -53,25 +52,24 @@ const Experience = () => {
 
   return (
     <section id="experience" className="py-20 relative">
-      <div className="flex items-center gap-4 mb-12">
-        <div className="h-px flex-1 bg-gradient-to-l from-white/20 to-transparent"></div>
+      <div className="flex items-center gap-4 mb-8">
+        <div className="h-px flex-1 bg-border"></div>
         <h2 className="text-3xl md:text-4xl font-bold">Experience</h2>
       </div>
 
-      <div className="relative border-l border-white/10 ml-4 md:ml-0 md:pl-8 space-y-12">
+      <div className="relative border-l border-border ml-4 md:ml-0 md:pl-8 space-y-8">
         {experiences.map((exp, index) => (
           <div key={index} className="relative pl-8 md:pl-0">
-            {/* Timeline dot */}
-            <div className="absolute left-[-5px] md:left-[-37px] top-1.5 w-3 h-3 rounded-full bg-secondary ring-4 ring-background"></div>
+            <div className="absolute left-[-5px] md:left-[-37px] top-1.5 w-3 h-3 rounded-full bg-accent ring-4 ring-background"></div>
             
-            <div className="glass-card hover:border-secondary/30 transition-all">
-              <h3 className="text-xl font-bold text-white">{exp.role}</h3>
-              <h4 className="text-primary font-medium mt-1">{exp.company}</h4>
+            <div className="clean-card hover:border-accent/30 transition-all">
+              <h3 className="text-xl font-bold text-textMain">{exp.role}</h3>
+              <h4 className="text-accent font-medium mt-1">{exp.company}</h4>
               <p className="text-sm text-textMuted mt-2 mb-4">{exp.period}</p>
               <ul className="space-y-2 text-textMuted text-sm md:text-base">
                 {exp.description.map((item, i) => (
                   <li key={i} className="flex items-start gap-2">
-                    <span className="text-secondary mt-1.5 w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0"></span>
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
                     <span>{item}</span>
                   </li>
                 ))}

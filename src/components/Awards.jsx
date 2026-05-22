@@ -36,25 +36,24 @@ const Awards = () => {
 
   return (
     <section id="awards" className="py-20 relative">
-      <div className="flex items-center gap-4 mb-12">
-        <div className="h-px flex-1 bg-gradient-to-l from-white/20 to-transparent"></div>
+      <div className="flex items-center gap-4 mb-8">
+        <div className="h-px flex-1 bg-border"></div>
         <h2 className="text-3xl md:text-4xl font-bold">Awards & Certifications</h2>
       </div>
 
       <div className="grid lg:grid-cols-2 gap-12">
-        {/* Honors & Awards */}
         <div>
           <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
             <Trophy className="text-yellow-500" /> Honors & Awards
           </h3>
           <div className="space-y-4">
             {awards.map((award, i) => (
-              <div key={i} className="glass p-4 rounded-lg flex items-start gap-4 hover:bg-white/5 transition-colors border-l-4 border-l-primary">
+              <div key={i} className="clean-panel p-4 rounded-lg flex items-start gap-4 hover:bg-gray-50 transition-colors border-l-4 border-l-accent">
                 <div className="flex-1">
-                  <h4 className="font-bold text-white">{award.title}</h4>
+                  <h4 className="font-bold text-textMain">{award.title}</h4>
                   <p className="text-sm text-textMuted">{award.issuer}</p>
                 </div>
-                <span className="text-xs text-primary font-medium whitespace-nowrap bg-primary/10 px-2 py-1 rounded">
+                <span className="text-xs text-accent font-medium whitespace-nowrap bg-accent/10 px-2 py-1 rounded">
                   {award.date}
                 </span>
               </div>
@@ -62,7 +61,6 @@ const Awards = () => {
           </div>
         </div>
 
-        {/* Certifications & Volunteering */}
         <div className="flex flex-col gap-10">
           <div>
             <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
@@ -70,7 +68,7 @@ const Awards = () => {
             </h3>
             <div className="flex flex-wrap gap-2">
               {certs.map((cert, i) => (
-                <span key={i} className="glass px-4 py-2 rounded-full text-sm font-medium hover:border-accent/50 transition-colors cursor-default">
+                <span key={i} className="bg-surface border border-border shadow-sm px-4 py-2 rounded-full text-sm font-medium hover:border-accent/50 transition-colors cursor-default text-textMain">
                   {cert}
                 </span>
               ))}
@@ -81,9 +79,9 @@ const Awards = () => {
             <h3 className="text-2xl font-bold mb-6">Volunteering</h3>
             <div className="space-y-4">
               {volunteering.map((vol, i) => (
-                <div key={i} className="glass-card !p-5">
-                  <h4 className="font-bold text-white text-lg">{vol.role}</h4>
-                  <p className="text-secondary text-sm font-medium mb-2">{vol.org}</p>
+                <div key={i} className="clean-card">
+                  <h4 className="font-bold text-textMain text-lg">{vol.role}</h4>
+                  <p className="text-accent text-sm font-medium mb-2">{vol.org}</p>
                   <p className="text-textMuted text-sm">{vol.desc}</p>
                 </div>
               ))}
