@@ -54,13 +54,13 @@ const Hero = () => {
             </a>
           </div>
           <div className="flex items-center gap-4 ml-4">
-            <a href="#" className="p-3 bg-surface border border-border shadow-sm rounded-full text-textMuted hover:text-textMain transition-all">
+            <a href="github.com/cyphare" className="p-3 bg-surface border border-border shadow-sm rounded-full text-textMuted hover:text-textMain transition-all">
               <Github className="w-5 h-5" />
             </a>
-            <a href="#" className="p-3 bg-surface border border-border shadow-sm rounded-full text-textMuted hover:text-[#0a66c2] transition-all">
+            <a href="linkedin.com/in/arnoldgbs" className="p-3 bg-surface border border-border shadow-sm rounded-full text-textMuted hover:text-[#0a66c2] transition-all">
               <Linkedin className="w-5 h-5" />
             </a>
-            <a href="#" className="p-3 bg-surface border border-border shadow-sm rounded-full text-textMuted hover:text-accent transition-all">
+            <a href="mailto:965arnold@example.com" className="p-3 bg-surface border border-border shadow-sm rounded-full text-textMuted hover:text-accent transition-all">
               <Mail className="w-5 h-5" />
             </a>
           </div>
