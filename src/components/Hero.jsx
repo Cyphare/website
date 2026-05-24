@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, ChevronDown } from 'lucide-react';
-
+import BlueCat from './BlueCat';
 const Hero = () => {
   return (
-    <section id="about" className="min-h-[80vh] flex flex-col justify-center relative">
-      <div className="max-w-4xl">
+    <section id="about" className="min-h-[80vh] flex flex-col lg:flex-row items-center justify-between gap-12 relative pb-16">
+      <div className="max-w-2xl flex-1 pt-10 lg:pt-0">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -57,15 +57,24 @@ const Hero = () => {
             <a href="https://github.com/cyphare" className="p-3 bg-surface border border-border shadow-sm rounded-full text-textMuted hover:text-textMain transition-all">
               <Github className="w-5 h-5" />
             </a>
-            <a href="https://linkedin.com/in/arnoldgbs" className="p-3 bg-surface border border-border shadow-sm rounded-full text-textMuted hover:text-[#0a66c2] transition-all">
+            <a href="https://www.linkedin.com/in/arnoldgbs" className="p-3 bg-surface border border-border shadow-sm rounded-full text-textMuted hover:text-[#0a66c2] transition-all">
               <Linkedin className="w-5 h-5" />
             </a>
-            <a href="mailto:965arnold@example.com" className="p-3 bg-surface border border-border shadow-sm rounded-full text-textMuted hover:text-accent transition-all">
+            <a href="mailto:965arnold@gmail.com" className="p-3 bg-surface border border-border shadow-sm rounded-full text-textMuted hover:text-accent transition-all">
               <Mail className="w-5 h-5" />
             </a>
           </div>
         </motion.div>
       </div>
+
+      <motion.div 
+        className="flex-shrink-0 flex justify-center items-center w-full lg:w-auto mt-8 lg:mt-0"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 0.6 }}
+      >
+        <BlueCat />
+      </motion.div>
 
       <motion.div 
         className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce"
