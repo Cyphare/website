@@ -4,7 +4,14 @@ import { GraduationCap, Award, Calendar } from 'lucide-react';
 
 const Education = () => {
   return (
-    <section id="education" className="py-20 relative">
+    <motion.section 
+      id="education" 
+      className="py-12 relative"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6 }}
+    >
       <div className="flex items-center gap-4 mb-8">
         <h2 className="text-3xl md:text-4xl font-bold">Education & Activities</h2>
         <div className="h-px flex-1 bg-border"></div>
@@ -33,13 +40,13 @@ const Education = () => {
 
           <div className="mb-6 flex items-center gap-2">
             <Award className="w-5 h-5 text-yellow-500" />
-            <span className="text-textMain font-medium">Grade: Top 1% ❗</span>
+            <span className="text-textMain font-medium">Grade: Top 1%</span>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h4 className="text-lg font-semibold mb-3 flex items-center gap-2 text-textMain">
-                <span className="text-xl">🏵️</span> Activities and societies
+                <span className="w-3 h-3 rounded-full bg-accent"></span> Activities and societies
               </h4>
               <ul className="space-y-2 text-textMuted text-sm md:text-base">
                 <li className="flex items-start gap-2">
@@ -70,7 +77,7 @@ const Education = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

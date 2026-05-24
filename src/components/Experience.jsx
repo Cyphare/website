@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Experience = () => {
   const experiences = [
@@ -51,7 +52,14 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 relative">
+    <motion.section 
+      id="experience" 
+      className="py-12 relative"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6 }}
+    >
       <div className="flex items-center gap-4 mb-8">
         <div className="h-px flex-1 bg-border"></div>
         <h2 className="text-3xl md:text-4xl font-bold">Experience</h2>
@@ -78,7 +86,7 @@ const Experience = () => {
           </div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

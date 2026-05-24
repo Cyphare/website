@@ -11,7 +11,7 @@ function App() {
     <div className="relative w-full min-h-screen bg-background text-textMain selection:bg-accent/20">
       <Navbar />
       
-      <main className="container max-w-5xl mx-auto px-6 pt-24 pb-12 flex flex-col gap-20">
+      <main className="container max-w-5xl mx-auto px-6 pt-24 pb-8 flex flex-col gap-12">
         <Hero />
         <Education />
         <Experience />

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FolderGit2, ExternalLink, Star, GitFork } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Projects = () => {
   const [repos, setRepos] = useState([]);
@@ -43,13 +44,20 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 relative">
+    <motion.section 
+      id="projects" 
+      className="py-12 relative"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6 }}
+    >
       <div className="flex items-center gap-4 mb-8">
         <h2 className="text-3xl md:text-4xl font-bold">Featured Projects</h2>
         <div className="h-px flex-1 bg-border"></div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6 mb-16">
+      <div className="grid md:grid-cols-2 gap-6 mb-12">
         {featuredProjects.map((project, index) => (
           <div key={index} className="clean-card group relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-1 bg-accent transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
@@ -116,7 +124,7 @@ const Projects = () => {
           <p className="text-sm text-textMuted/70">Change the username in Projects.jsx to fetch real data.</p>
         </div>
       )}
-    </section>
+    </motion.section>
   );
 };
 

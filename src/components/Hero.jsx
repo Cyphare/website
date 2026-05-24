@@ -45,9 +45,14 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          <a href="#projects" className="px-6 py-3 bg-textMain text-white font-semibold rounded-full hover:bg-textMain/90 hover:scale-[1.02] transition-all shadow-sm">
-            View My Work
-          </a>
+          <div className="flex gap-4">
+            <a href="#projects" className="px-6 py-3 bg-textMain text-white font-semibold rounded-full hover:bg-textMain/90 hover:scale-[1.02] transition-all shadow-sm">
+              View My Work
+            </a>
+            <a href="/resume.pdf" target="_blank" rel="noreferrer" className="px-6 py-3 bg-surface border border-border text-textMain font-semibold rounded-full hover:border-accent hover:text-accent hover:scale-[1.02] transition-all shadow-sm">
+              Download Resume
+            </a>
+          </div>
           <div className="flex items-center gap-4 ml-4">
             <a href="#" className="p-3 bg-surface border border-border shadow-sm rounded-full text-textMuted hover:text-textMain transition-all">
               <Github className="w-5 h-5" />
