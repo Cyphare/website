@@ -20,7 +20,7 @@ function App() {
       </main>
       
       <footer className="w-full border-t border-border py-8 text-center text-textMuted text-sm">
-        <p>© {new Date().getFullYear()} Arnold GBS. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Arnold. All rights reserved.</p>
         <p className="mt-1">Built with React & Vite.</p>
       </footer>
     </div>

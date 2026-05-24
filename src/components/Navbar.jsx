@@ -19,7 +19,7 @@ const Navbar = () => {
     >
       <div className="container max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#" className="text-lg font-bold tracking-tight text-textMain">
-          Arnold<span className="text-accent">GBS</span>
+          Arnold
         </a>
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-textMuted">
           {navItems.map((item) => (

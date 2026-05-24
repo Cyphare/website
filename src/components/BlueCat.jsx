@@ -49,16 +49,23 @@ const BlueCat = () => {
       className="relative w-48 h-48 md:w-64 md:h-64 drop-shadow-xl hover:scale-105 transition-transform duration-300"
     >
       <svg viewBox="0 0 100 100" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="furry" x="-20%" y="-20%" width="140%" height="140%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.08" numOctaves="3" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" xChannelSelector="R" yChannelSelector="G" />
+          </filter>
+        </defs>
+
         {/* Ears */}
-        <polygon points="10,40 10,5 40,30" fill="#3b82f6" />
-        <polygon points="90,40 90,5 60,30" fill="#3b82f6" />
+        <polygon points="10,40 10,5 40,30" fill="#3b82f6" filter="url(#furry)" />
+        <polygon points="90,40 90,5 60,30" fill="#3b82f6" filter="url(#furry)" />
         
         {/* Inner Ears */}
-        <polygon points="15,35 15,15 30,30" fill="#93c5fd" />
-        <polygon points="85,35 85,15 70,30" fill="#93c5fd" />
+        <polygon points="15,35 15,15 30,30" fill="#93c5fd" filter="url(#furry)" />
+        <polygon points="85,35 85,15 70,30" fill="#93c5fd" filter="url(#furry)" />
         
         {/* Head */}
-        <circle cx="50" cy="55" r="45" fill="#3b82f6" />
+        <circle cx="50" cy="55" r="45" fill="#3b82f6" filter="url(#furry)" />
         
         {/* Eyes (Whites) */}
         <circle cx="35" cy="50" r="12" fill="white" />

@@ -22,7 +22,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          Hi, I'm <span className="text-gradient">Arnold GBS</span>.
+          Hi, I'm <span className="text-gradient">Arnold</span>.
           <br />
           <span className="text-3xl md:text-5xl text-textMuted font-medium">
             Award Winning ML-IoT Enthusiast
